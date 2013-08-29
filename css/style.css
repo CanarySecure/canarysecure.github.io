@@ -138,7 +138,8 @@
       box-shadow: 0 0 5px #2c6a07;
       -moz-box-shadow: 0 0 5px #2c6a07;
       -webkit-box-shadow: 0 0 5px #2c6a07;
-      border-radius: 6px; }
+      border-radius: 6px;
+      height: 250px; }
       #questions ul li h3 {
         font-family: "Playball", cursive;
         color: #a4df86; }
