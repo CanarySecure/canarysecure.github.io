@@ -84,7 +84,8 @@ $fancyFont: 'Playball', cursive;
 
 		input {
 			font-size: 2em;
-			height: auto;
+			height: 54px;
+			padding: 9px 0 10px 10px;
 		}
 
 		button {
@@ -187,11 +188,12 @@ $fancyFont: 'Playball', cursive;
 		border: 1px solid $darkestGreen;
 		background-color: $darkerGreen;
 		color: $darkestGreen;
-		font: $fancyFont;
+		font-family: $fancyFont;
+		font-size: 1.5em;
 		display: block;
 		border-radius: 5px;
 		margin: 30px auto 30px auto;
-		padding: 5px;
+		padding: 5px 15px;
 		cursor: pointer;
 
 		&:hover {
@@ -225,9 +227,17 @@ $fancyFont: 'Playball', cursive;
 }
 
 #who {
+
+	img {
+		max-width: 49%;
+	}
+
 	.whoami {
+		max-width: 50%;
 		text-align: center;
 		display: inline-block;
+		position: relative;
+		top: 9em;
 
 		h2 {
 			font-size: 4em;
