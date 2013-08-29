@@ -1,14 +1,21 @@
 /* Variables */
+$darkestGreen: #2c6a07;
 $darkerGreen: #4aad0d;
 $lighterGreen: #a4df86;
 
 $greyText: #737373;
 $redText: #ae3b22;
 
+$fancyFont: 'Playball', cursive;
+
 /* Global CSS */
 
 .most-of-page {
 	min-height: 95%;
+}
+
+.half-of-the-page {
+	height: 75%;
 }
 
 .full-page {
@@ -17,6 +24,10 @@ $redText: #ae3b22;
 
 .clear {
 	clear: both;
+}
+
+.dont-show {
+	display: none;
 }
 
 .green-thang {
@@ -57,10 +68,11 @@ $redText: #ae3b22;
 
 	.grab-focus {
 
-		span.logo {
+		h1.logo {
 			padding-top: 5%;
-			font-family: 'Playball', cursive;
+			font-family: $fancyFont;
 			font-size: 8em;
+			margin-top: 0;
 		}
 	}
 
@@ -156,8 +168,71 @@ $redText: #ae3b22;
 	}
 }
 
+#questions {
+	overflow: hidden;
 
+	h2 {
+		margin-left: 15%;
+		padding-top: 2%;
+		font-family: $fancyFont;
+		font-size: 3em;
+	}
 
+	button {
+		border: 1px solid $darkestGreen;
+		background-color: $darkerGreen;
+		color: $darkestGreen;
+		font: $fancyFont;
+		display: block;
+		border-radius: 5px;
+		margin: 30px auto 30px auto;
+		padding: 5px;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $lighterGreen;
+		}
+	}
+
+	ul {
+		list-style-type: none;
+		padding: 0;
+		margin: auto;
+		width: 80%;
+
+		li {
+			float: left;
+			width: 40%;
+			margin: 2% 5%;
+			padding: 5px 15px;
+			box-shadow: 0 0 5px $darkestGreen;
+			-moz-box-shadow: 0 0 5px $darkestGreen;
+			-webkit-box-shadow: 0 0 5px $darkestGreen;
+			border-radius: 6px;
+
+			h3 {
+				font-family: $fancyFont;
+				color: $lighterGreen;
+			}
+		}
+	}
+}
+
+#who {
+	.whoami {
+		text-align: center;
+		display: inline-block;
+
+		h2 {
+			font-size: 4em;
+			font-family: $fancyFont;
+		}
+
+		span {
+			font-size: 2em;
+		}
+	}
+}
 
 /** Animations **/
 @-webkit-keyframes slideGoodChecksumAcross {

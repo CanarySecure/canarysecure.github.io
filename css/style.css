@@ -3,11 +3,17 @@
 .most-of-page {
   min-height: 95%; }
 
+.half-of-the-page {
+  height: 75%; }
+
 .full-page {
   height: 100%; }
 
 .clear {
   clear: both; }
+
+.dont-show {
+  display: none; }
 
 .green-thang {
   background-color: #4aad0d;
@@ -32,10 +38,11 @@
     max-width: 90%; }
 
 /* Specific CSS */
-#topViewWrapper .grab-focus span.logo {
+#topViewWrapper .grab-focus h1.logo {
   padding-top: 5%;
-  font-family: 'Playball', cursive;
-  font-size: 8em; }
+  font-family: "Playball", cursive;
+  font-size: 8em;
+  margin-top: 0; }
 #topViewWrapper .input-group {
   width: 60%;
   margin: auto;
@@ -98,6 +105,52 @@
       #movingCodeWrapper #animation-wrapper .container .checksums span.checksum {
         display: block;
         padding-left: 10px; }
+
+#questions {
+  overflow: hidden; }
+  #questions h2 {
+    margin-left: 15%;
+    padding-top: 2%;
+    font-family: "Playball", cursive;
+    font-size: 3em; }
+  #questions button {
+    border: 1px solid #2c6a07;
+    background-color: #4aad0d;
+    color: #2c6a07;
+    font: "Playball", cursive;
+    display: block;
+    border-radius: 5px;
+    margin: 30px auto 30px auto;
+    padding: 5px;
+    cursor: pointer; }
+    #questions button:hover {
+      background-color: #a4df86; }
+  #questions ul {
+    list-style-type: none;
+    padding: 0;
+    margin: auto;
+    width: 80%; }
+    #questions ul li {
+      float: left;
+      width: 40%;
+      margin: 2% 5%;
+      padding: 5px 15px;
+      box-shadow: 0 0 5px #2c6a07;
+      -moz-box-shadow: 0 0 5px #2c6a07;
+      -webkit-box-shadow: 0 0 5px #2c6a07;
+      border-radius: 6px; }
+      #questions ul li h3 {
+        font-family: "Playball", cursive;
+        color: #a4df86; }
+
+#who .whoami {
+  text-align: center;
+  display: inline-block; }
+  #who .whoami h2 {
+    font-size: 4em;
+    font-family: "Playball", cursive; }
+  #who .whoami span {
+    font-size: 2em; }
 
 /** Animations **/
 @-webkit-keyframes slideGoodChecksumAcross {
