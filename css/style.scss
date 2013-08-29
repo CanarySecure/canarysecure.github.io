@@ -80,6 +80,7 @@ $fancyFont: 'Playball', cursive;
 		width: 60%;
 		margin: auto;
 		margin-top: 5%;
+		padding-bottom: 10%;
 
 		input {
 			font-size: 2em;
@@ -95,7 +96,7 @@ $fancyFont: 'Playball', cursive;
 #movingCodeWrapper {
 
 	.grab-focus {
-		margin-top: 5%;
+		padding: 10% 0 5% 0;
 	}
 
 	#animation-wrapper {
@@ -103,9 +104,12 @@ $fancyFont: 'Playball', cursive;
 		margin: auto;
 		position: relative;
 		top: 5%;
+		max-height: 400px;
+		padding-top: 5%;
 
 		#left-side {
-			height: 60%;
+			height: 50%;
+			max-height: 400px;
 			width: 50%;
 			float: left;
 			overflow: hidden;
@@ -113,7 +117,8 @@ $fancyFont: 'Playball', cursive;
 		}
 
 		#right-side {
-			height: 60%;
+			height: 50%;
+			max-height: 400px;
 			width: 49%;
 			border-left: 1px solid grey;
 			float: left;
