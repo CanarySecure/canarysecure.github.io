@@ -1,0 +1,225 @@
+/* Variables */
+$darkerGreen: #4aad0d;
+$lighterGreen: #a4df86;
+
+$greyText: #737373;
+$redText: #ae3b22;
+
+/* Global CSS */
+
+.most-of-page {
+	min-height: 95%;
+}
+
+.full-page {
+	height: 100%;
+}
+
+.clear {
+	clear: both;
+}
+
+.green-thang {
+	background-color: $darkerGreen;
+		color: white;
+}
+
+.light-green-thang {
+	background-color: $lighterGreen;
+}
+
+.light-bg-thang {
+	background: url(../img/grid_noise.png);
+	color: #585858;
+}
+
+.grab-focus {
+	text-align: center;
+
+	> span {
+		font-size: 3em;
+		display: block;
+
+		&.smaller {
+			font-size: 2em;
+		}
+	}
+
+	> img {
+		max-height: 10%;
+		max-width: 90%;
+	}
+}
+
+/* Specific CSS */
+
+#topViewWrapper {
+
+	.grab-focus {
+
+		span.logo {
+			padding-top: 5%;
+			font-family: 'Playball', cursive;
+			font-size: 8em;
+		}
+	}
+
+	.input-group {
+		width: 60%;
+		margin: auto;
+		margin-top: 5%;
+
+		input {
+			font-size: 2em;
+			height: auto;
+		}
+
+		button {
+			font-size: 2em;
+		}
+	}
+}
+
+#movingCodeWrapper {
+
+	.grab-focus {
+		margin-top: 5%;
+	}
+
+	#animation-wrapper {
+		width: 60%;
+		margin: auto;
+		position: relative;
+		top: 5%;
+
+		#left-side {
+			height: 60%;
+			width: 50%;
+			float: left;
+			overflow: hidden;
+
+		}
+
+		#right-side {
+			height: 60%;
+			width: 49%;
+			border-left: 1px solid grey;
+			float: left;
+			overflow: hidden;
+		}
+
+		.container {
+			position: relative;
+
+			span.file {
+				font-size: 5em;
+				display: block;
+				position: relative;
+				top: 50%;
+				margin-top: -.6em;
+				opacity: 0;
+				-webkit-animation: slideFileAcross 3s linear infinite;
+				color: $greyText;
+			}
+
+			.checksums {
+				position: absolute;
+				font-size: 1.5em;
+				left: -200%;
+				opacity: 1;
+				font-weight: bold;
+				color: $greyText;
+				top: 50%;
+				margin-top: -1.4em;
+
+				&.good {
+					-webkit-animation: slideGoodChecksumAcross 6s linear infinite;
+				}
+
+				&.bad {
+					-webkit-animation: slideBadChecksumAcross 6s linear infinite;
+				}
+
+				span.checksum {
+					display: block;
+					padding-left: 10px;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+/** Animations **/
+@-webkit-keyframes slideGoodChecksumAcross {
+
+	42% {
+		left: 0;
+		color: $greyText; 
+		opacity: 1;
+	}
+
+	50% {
+		left: 0;
+		color: $darkerGreen;
+		opacity: 1;
+	}
+
+	55% {
+		left: 0;
+		color: $darkerGreen;
+		opacity: 0;
+	}
+
+	100% {
+		left: -200%;
+		color: $darkerGreen;
+		opacity: 0;
+	}
+}
+
+
+@-webkit-keyframes slideBadChecksumAcross {
+
+	50% {
+		left: -200%;
+		color: $greyText;
+		opacity: 1;
+	}
+
+	92% {
+		left: 0;
+		color: $greyText; 
+		opacity: 1;
+	}
+
+	95% {
+		left: 0;
+		color: $redText;
+		opacity: 1;
+	}
+
+	99% {
+		left: 0;
+		color: $redText;
+		opacity: 0;
+	}
+
+	100% {
+		left: -200%;
+		color: $redText;
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes slideFileAcross {
+	10% {
+		opacity: 1;
+	}
+	100% {
+		left: 210%;
+		opacity: 1;
+	}
+}
